@@ -1,21 +1,29 @@
 @Library('testUtils')_
-pipeline {
+pipeline 
+{
     agent any
     stages
     {
-        stage('Demo') {
-        echo 'Hello world'
-        sayHello 'Pepe'
-            script {
-               def changeLogSets = currentBuild.changeSets
-                for (int i = 0; i < changeLogSets.size(); i++) {
-                def entries = changeLogSets[i].items
-                for (int j = 0; j < entries.length; j++) {
-                    def entry = entries[j]
-                    echo entry.getDomain()
+        stage('Demo') 
+        {
+            steps
+            {
+                echo 'Hello world'
+                sayHello 'Paco'
+                script 
+                {
+                    def changeLogSets = currentBuild.changeSets
+                    for (int i = 0; i < changeLogSets.size(); i++) 
+                    {
+                        def entries = changeLogSets[i].items
+                        for (int j = 0; j < entries.length; j++) 
+                        {
+                            def entry = entries[j]
+                            echo entry.getDomain()
+                        }
                     }
+                
                 }
-            
             }
         }
     }
