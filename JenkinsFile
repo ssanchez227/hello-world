@@ -19,9 +19,12 @@ def b = changeLogSets.build
                         def entries = changeLogSets[i].items
                         for (int j = 0; j < entries.length; j++) 
                         {
-                            def entry = entries[j]
-echo "Domain is"
-                            echo entry.getMsg()
+                           entry.getAffectedPaths().each{
+                                path - echo path
+                            }
+                            entry.getAffectedFiles().each{
+                                file - echo file
+                            }
                         }
                     }
                 
