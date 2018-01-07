@@ -20,9 +20,7 @@ pipeline
                         for (int j = 0; j < entries.length; j++) 
                         {
                            def paths = entry.getAffectedPaths()
-                           paths.each{
-                                println 'ha'
-                            }
+                         
                             //entry.getAffectedFiles().each{
                               //  file -> echo file
                             //}
