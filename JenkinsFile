@@ -13,6 +13,7 @@ pipeline
                 script 
                 {
                     def changeLogSets = currentBuild.changeSets
+def b = changeLogSets.build
                     for (int i = 0; i < changeLogSets.size(); i++) 
                     {
                         def entries = changeLogSets[i].items
