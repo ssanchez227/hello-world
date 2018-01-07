@@ -19,7 +19,9 @@ pipeline
                         def entries = changeLogSets[i].items
                         for (int j = 0; j < entries.length; j++) 
                         {
-                           def paths = entry.getAffectedPaths()
+                            
+                            def  entry = entries[j]
+                            def paths = entry.getAffectedPaths()
                          
                             //entry.getAffectedFiles().each{
                               //  file -> echo file
