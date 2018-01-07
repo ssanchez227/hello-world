@@ -25,10 +25,7 @@ pipeline
                             paths.each{
                              path -> echo path
                             }
-                            def files =  entry.getAffectedFiles()
-                            files.each{
-                               file -> echo file
-                            }
+                           
                         }
                     }
                 
