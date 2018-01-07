@@ -21,7 +21,7 @@ pipeline
                         {
                            def paths = entry.getAffectedPaths()
                            paths.each{
-                                path -> echo path
+                                println 'ha'
                             }
                             //entry.getAffectedFiles().each{
                               //  file -> echo file
@@ -33,4 +33,4 @@ pipeline
             }
         }
     }
-}   
+}
