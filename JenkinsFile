@@ -19,6 +19,7 @@ pipeline
                         for (int j = 0; j < entries.length; j++) 
                         {
                             def entry = entries[j]
+echo "Domain is"
                             echo entry.getDomain()
                         }
                     }
