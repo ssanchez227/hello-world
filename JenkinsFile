@@ -22,9 +22,9 @@ pipeline
                            entry.getAffectedPaths().each{
                                 path -> echo path
                             }
-                            entry.getAffectedFiles().each{
-                                file -> echo file
-                            }
+                            //entry.getAffectedFiles().each{
+                              //  file -> echo file
+                            //}
                         }
                     }
                 
