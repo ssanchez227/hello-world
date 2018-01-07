@@ -19,7 +19,8 @@ pipeline
                         def entries = changeLogSets[i].items
                         for (int j = 0; j < entries.length; j++) 
                         {
-                           entry.getAffectedPaths().each{
+                           def paths = entry.getAffectedPaths()
+                           paths.each{
                                 path -> echo path
                             }
                             //entry.getAffectedFiles().each{
@@ -32,4 +33,4 @@ pipeline
             }
         }
     }
-}
+}   
