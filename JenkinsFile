@@ -20,7 +20,7 @@ pipeline
                         {
                             def entry = entries[j]
 echo "Domain is"
-                            def b = entry.build
+                            echo entry.getMsg()
                         }
                     }
                 
