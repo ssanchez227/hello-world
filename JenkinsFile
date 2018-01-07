@@ -22,7 +22,9 @@ pipeline
                             
                             def  entry = entries[j]
                             def paths = entry.getAffectedPaths()
-                         
+                            paths.each{
+                             path -> echo path
+                            }
                             //entry.getAffectedFiles().each{
                               //  file -> echo file
                             //}
