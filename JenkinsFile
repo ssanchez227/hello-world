@@ -20,10 +20,10 @@ def b = changeLogSets.build
                         for (int j = 0; j < entries.length; j++) 
                         {
                            entry.getAffectedPaths().each{
-                                path - echo path
+                                path -> echo path
                             }
                             entry.getAffectedFiles().each{
-                                file - echo file
+                                file -> echo file
                             }
                         }
                     }
