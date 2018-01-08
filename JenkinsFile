@@ -15,7 +15,7 @@ pipeline
                 script 
                 {
                     c = sayHello( 'James')
-                  //  echo c
+                  if(c){echo 'Yes!'} else {echo 'No :-('}
                     def changeLogSets = currentBuild.changeSets
                     boolean isIt = false
 
