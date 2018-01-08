@@ -1,6 +1,9 @@
 @Library('testUtils')_
 pipeline 
 {
+    environment {
+     c = false
+    }
     agent any
     stages
     {
@@ -9,9 +12,9 @@ pipeline
             steps
             {
                 echo 'Hello world, ${sayHello.namo}'
-                def c = sayHello 'Paco'
                 script 
                 {
+                    echo c
                     def changeLogSets = currentBuild.changeSets
                     boolean isIt = false
 
