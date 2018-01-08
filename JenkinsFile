@@ -11,11 +11,11 @@ pipeline
         {
             steps
             {
-                echo 'Hello world, ${sayHello.namo}'
+                //echo 'Hello world, ${sayHello.namo}'
                 script 
                 {
                     c = sayHello( 'James')
-                    echo c
+                  //  echo c
                     def changeLogSets = currentBuild.changeSets
                     boolean isIt = false
 
