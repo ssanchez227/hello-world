@@ -14,7 +14,7 @@ pipeline
                 echo 'Hello world, ${sayHello.namo}'
                 script 
                 {
-                    c = sayHello 'James'
+                    c = sayHello( 'James')
                     echo c
                     def changeLogSets = currentBuild.changeSets
                     boolean isIt = false
