@@ -8,7 +8,7 @@ pipeline
         {
             steps
             {
-                echo 'Hello world, ${namo}'
+                echo 'Hello world, $namo'
                 sayHello 'Paco'
                 script 
                 {
