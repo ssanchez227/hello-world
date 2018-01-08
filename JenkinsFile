@@ -9,7 +9,7 @@ pipeline
             steps
             {
                 echo 'Hello world, ${sayHello.namo}'
-                sayHello 'Paco'
+                def c = sayHello 'Paco'
                 script 
                 {
                     def changeLogSets = currentBuild.changeSets
